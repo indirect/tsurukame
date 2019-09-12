@@ -94,6 +94,8 @@
     if (!a.assignment.isLessonStage && b.assignment.isLessonStage) return NSOrderedDescending;
     if (a.assignment.srsStage > b.assignment.srsStage) return NSOrderedAscending;
     if (a.assignment.srsStage < b.assignment.srsStage) return NSOrderedDescending;
+    if (a.guruDate > b.guruDate) return NSOrderedAscending;
+    if (a.guruDate < b.guruDate) return NSOrderedDescending;
     return NSOrderedSame;
   };
 
