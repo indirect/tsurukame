@@ -45,7 +45,6 @@ lane :new_version do
 end
 
 lane :beta do
-  match(type: "appstore")
   build_app(
     scheme: "Tsurukame",
     include_bitcode: true,
