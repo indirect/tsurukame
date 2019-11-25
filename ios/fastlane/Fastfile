@@ -49,7 +49,6 @@ lane :new_version do
 end
 
 lane :beta do
-  match(type: "appstore")
   build_app(
     scheme: "Tsurukame",
     include_bitcode: true,
@@ -59,10 +58,7 @@ lane :beta do
   changelog = changelog_from_git_commits(pretty: "format:%s")
   upload_to_testflight(
     changelog: changelog,
-    distribute_external: true,
-    groups: "Testers",
-    demo_account_required: true,
-    reject_build_waiting_for_review: true,
+    distribute_external: false,
   )
 end
 
