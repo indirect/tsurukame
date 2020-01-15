@@ -54,10 +54,16 @@ lane :beta do
   changelog = changelog_from_git_commits(pretty: "format:%s")
   upload_to_testflight(
     changelog: changelog,
+<<<<<<< HEAD
     distribute_external: true,
     groups: "Testers",
     demo_account_required: true,
     reject_build_waiting_for_review: true,
+||||||| constructed merge base
+    distribute_external: true,
+=======
+    distribute_external: false,
+>>>>>>> Also make fastlane use net.arko.tsurukame
   )
 end
 

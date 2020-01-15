@@ -1,2 +1,2 @@
-app_identifier "com.davidsansome.wanikani"
-apple_id ENV["APPLE_ID"] || "circleci@davidsansome.com"
+app_identifier "net.arko.tsurukame"
+apple_id "andre@arko.net"
